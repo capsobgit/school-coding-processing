@@ -1,3 +1,7 @@
+/**
+  Transformation von Maus-Events
+  nach Positionen dey Spiels
+ */
 public class Ermittler
 {
   Bereich[] bereiche;

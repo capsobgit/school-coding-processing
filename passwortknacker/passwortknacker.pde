@@ -1,5 +1,7 @@
-
-
+/**
+  Simulation eines Passwort-Knackers.
+  Hier ein Beispiel mit 3 Zeichen.
+ */
 char ersterBuchstabe = 0;
 char zweiterBuchstabe = 0;
 char dritterBuchstabe = 0;

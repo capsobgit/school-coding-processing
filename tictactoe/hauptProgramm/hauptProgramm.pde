@@ -1,5 +1,6 @@
 /*
  * Tic-Tac-Toe-Spiel
+ * Hauptprogramm
  * @author Bruno Sobral
  * @version 1.0 / 16.01.18
  */
@@ -64,7 +65,6 @@ void draw()
             gitter.pos[i+2], gitter.pos[i+3]);
   }
   strokeWeight(2);
-  //line(50,470,450,470);
   fill(0);
   text("[Nächste Runde]", 330, 480);
   if (player)

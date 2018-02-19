@@ -1,3 +1,8 @@
+/**
+  Der Gewinnmanager prüft für jeden Spieler, ob
+  nach einem Zug ein Spieler eine bestimmte Kombination
+  von Feldern belegt, welche zum Sieg führt.
+*/
 public class GewinnerManager
 {
   int feldLaenge;
@@ -18,17 +23,19 @@ public class GewinnerManager
   //Spieler einfuegen an entspr. Position
   void insert(boolean player, int pos)
   {
+    //Falls das Feld voll ist
     if (zuegeGespielt == spielStand.length)
     {
       return;
     }
+    //Spielstand wird gemerkt
     spielStand[pos] = !player ? SPIELER1 : SPIELER2;
     zuegeGespielt++;
   }
+  //Es wird überprüft, ob ein Spieler gewonnen hat.
   int pruefeGewonnen(boolean player)
   {
     int tmpSpieler = !player ? SPIELER1 : SPIELER2;
-    //test();
     for (int i=0; i<spielStand.length; i++)
     {
       //horizontale Linien
@@ -52,6 +59,26 @@ public class GewinnerManager
         && spielStand[6] == tmpSpieler)
       {
         return 3;
+      }
+      else if (spielStand[1] == tmpSpieler && spielStand[4] == tmpSpieler
+        && spielStand[7] == tmpSpieler)
+      {
+        return 4;
+      }
+      else if (spielStand[2] == tmpSpieler && spielStand[5] == tmpSpieler
+        && spielStand[8] == tmpSpieler)
+      {
+        return 5;
+      }
+      else if (spielStand[0] == tmpSpieler && spielStand[4] == tmpSpieler
+        && spielStand[8] == tmpSpieler)
+      {
+        return 6;
+      }
+      else if (spielStand[2] == tmpSpieler && spielStand[4] == tmpSpieler
+        && spielStand[6] == tmpSpieler)
+      {
+        return 7;
       }
     }
     return -1;

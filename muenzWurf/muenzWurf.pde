@@ -1,7 +1,10 @@
+/**
+  Simulation eines Münzwurfs
+ */
 void setup()
 {
  size(1000, 800);
- frameRate(15);
+ frameRate(25);
 }
 
 int hoehePos = 500;

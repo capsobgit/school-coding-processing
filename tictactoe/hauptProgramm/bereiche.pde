@@ -1,3 +1,9 @@
+/**
+  Kapselt die Eigenschaften eines
+  Bereichsfeldes. Es kann belegt sein (true)
+  oder frei sein. Weiterhin wird hier definiert
+  wie weit sich ein Bereich erstreckt.
+ */
 public class Bereich
 {
   int index;
