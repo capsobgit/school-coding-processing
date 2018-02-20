@@ -116,6 +116,8 @@ void mouseClicked()
       gewinnLinie.setFill(0);
       gewinnLinie.setStrokeWeight(8);
       shape(gewinnLinie);
+      //Spiel vorbei
+      noLoop();
   }
   player = !player;
 }
